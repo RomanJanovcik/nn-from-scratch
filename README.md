@@ -4,18 +4,21 @@ This project implements a basic feedforward neural network using standard C++ li
 It implements forward propagation, backpropagation, and training with gradient descent on the classic XOR problem.
 
 ## Future developements
-Implement Layer abstraction and a Tensor class
+* Implement Layer abstraction
+* Add other activation functions
+* Implement a Tensor class
+* Solve classification problems
 
 ## Build & Run
 
 ### Requirements
--- C++17-compatible compiler
+* C++17-compatible compiler
 
 ### Steps
 
 ```bash
-git clone https://github.com/RomanJanovcik/nn_from_scratch
-cd nn_from_scratch
+git clone https://github.com/RomanJanovcik/nn-from-scratch
+cd nn-from-scratch
 mkdir build
 cd build
 cmake ..

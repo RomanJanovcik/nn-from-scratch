@@ -4,7 +4,7 @@
 
 void test_xor() {
 	std::cout<<"Testing XOR accuracy:"<<std::endl;
-	NeuralNetwork nn_xor(2, 2, 1, 0.1);
+	NeuralNetwork nn_xor(2, 4, 1, 0.1);
 
 	Matrix data({{0, 0}, {0, 1}, {1, 0}, {1, 1}});
 	Matrix y_true({{0}, {1}, {1}, {0}});

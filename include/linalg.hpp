@@ -73,15 +73,6 @@ public:
         return sum;
     }
 
-	double squared_distance(const Vector& other) const {
-		if (size() != other.size()) throw std::invalid_argument("Size mismatch");
-		double sum = 0.0;
-		for (int i = 0; i < size(); ++i) {
-			sum += (elements[i] - other.elements[i]) * (elements[i] - other.elements[i]);
-		}
-		return sum;
-	}
-
 	static Vector zeros(unsigned size) {
 		Vector result(size);
 		for (int i = 0; i < size; ++i) {

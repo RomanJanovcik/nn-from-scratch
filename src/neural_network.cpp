@@ -27,13 +27,13 @@ void NeuralNetwork::backward(const Matrix& data, const Matrix& y_true) {
 
 		// Backpropagation
 		Matrix output_error = y_true - output;
-		Matrix output_delta = output_error * sigmoid_derivative(output);		
+		Matrix output_delta = output_error * sigmoid_derivative(output_activation);		
 		
 		Matrix d_w2 = hidden_output.transpose().dot(output_delta);
 		Vector d_b2 = output_delta.sumCols().toVector();
 
 		Matrix hidden_error = output_delta.dot(w2.transpose());
-		Matrix hidden_delta = hidden_error * sigmoid_derivative(hidden_output);
+		Matrix hidden_delta = hidden_error * sigmoid_derivative(hidden_activation);
 
 		Matrix d_w1 = data.transpose().dot(hidden_delta);
 		Vector d_b1 = hidden_delta.sumCols().toVector();
